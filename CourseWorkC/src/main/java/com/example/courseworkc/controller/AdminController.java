@@ -52,14 +52,10 @@ public class AdminController {
         });
 
         signinbutton.setOnAction(event->{
-//            String ip_adr = ip_adress.getText();
-//            int port_ = Integer.parseInt(port.getText());
-            // TODO return defaults
-            String ip_adr = "localhost";
-            int port_ = 8081;
+            String ip_adr = ip_adress.getText();
+            int port_ = Integer.parseInt(port.getText());
 
-
-            if(client.signIn(ip_adr,port_,"1","1") == 1){
+            if(client.signIn(ip_adr,port_,loginfield.getText(), passwordfield.getText()) == 1){
                 System.out.println("Connected successfully!");
                 signinbutton.getScene().getWindow().hide();
                 FXMLLoader loader = new FXMLLoader();

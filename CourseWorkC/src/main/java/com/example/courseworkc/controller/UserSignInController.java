@@ -66,9 +66,7 @@ public class UserSignInController {
             String ip_adr = ip_adress.getText();
             int port_ = Integer.parseInt(port.getText());
             UserClient userClient = new UserClient();
-            // TODO delete defaults
-//            ip_adr = "localhost";
-//            port_ = 8081;
+
             if(userClient.signIn(ip_adr,port_,loginfield.getText(),password_field.getText()) == 1){
                 System.out.println("Successfully signed in!");
                 signinbutton.getScene().getWindow().hide();
