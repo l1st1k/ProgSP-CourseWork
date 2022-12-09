@@ -3,7 +3,7 @@ CREATE TABLE `admins` (
                           `firstname` varchar(45) NOT NULL,
                           `lastname` varchar(45) NOT NULL,
                           `login` varchar(45) NOT NULL,
-                          `password` varchar(45) NOT NULL,
+                          `password` varchar(64) NOT NULL,
                           `email` varchar(45) NOT NULL,
                           PRIMARY KEY (`id`)
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -22,7 +22,7 @@ CREATE TABLE `user` (
                          `firstname` varchar(45) NOT NULL,
                          `lastname` varchar(45) NOT NULL,
                          `login` varchar(45) NOT NULL,
-                         `password` varchar(45) NOT NULL,
+                         `password` varchar(64) NOT NULL,
                          `email` varchar(45) NOT NULL,
                          `gender` varchar(45) NOT NULL,
                          `location` varchar(45) NOT NULL,
